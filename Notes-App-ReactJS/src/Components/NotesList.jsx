@@ -8,7 +8,7 @@ const NotesList = ( { notes, addNote, deleteNote } ) => {
             <div className="notes-list-container">
                 { notes.length > 0 ? (
                     notes.map(( { id, body, title, createdAt }, index ) => (     
-                        <Note {...{ id, body, title, createdAt }} deleteNote={deleteNote} key={index} /> // --->  Menggunakan Spread Operator untuk mengirimkan seluruh data props dari komponen NotesList ke komponen Note
+                        <Note {...{ id, body, title, createdAt }} deleteNote={deleteNote} key={index} /> // --->  Menggunakan Spread Operator untuk mengirimkan seluruh data props notes dari komponen NotesList ke komponen Note
                     ))       
                 ) : (
                     <h1>Tidak ada catatan yang tersedia</h1>
